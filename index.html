@@ -1,0 +1,15 @@
+<x id=t>
+<script>
+// Add a person
+function e(td,i){
+  td.innerHTML = "<table><th rowspan=3 id=t"+i+"><input value=lastname><br><input value=firstname><br><input value=birth><br><input value=job><br><input value=death><br><td id=u"+(2*i)+"><tr><td><button onclick=remove();f("+i+")>+</button><tr><td id=u"+(2*i+1)+">";
+}
+// Add parents
+function f(i){
+  top["t"+i].className="a";
+  e(top["u"+(2*i)],2*i);
+  e(top["u"+(2*i+1)],2*i+1);
+}
+e(t,1)
+</script>
+<style>*{position:relative}.a:after{content:'';height:50%;border:1px solid;border-right:none;position:absolute;top:50%;right:-7px;transform:translateY(-50%);border-radius:5px;width:5px
